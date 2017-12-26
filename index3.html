@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./App.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        #profile,#logout,#feed{display: none;}
+    </style>
+  </head>
+    <div class="transparent" style="height:30px;"></div>
+  <div class="container transparent" style="width:450px">
+      <div class="card-panel z-depth-5 transparent " >
+    <div class="container transparent" style="width: 120px">
+        <div class="row">
+                <div class="col s12 m12" >
+                    <img src="./images/profile.jpg" alt="" 
+                    class="materialboxed responsive-img z-depth-5 circle" data-caption="Here is an image caption">
+                </div>
+
+                    </div><!-- Row -->
+                </div><!-- container image-->
+                <div class="container center-align transparent">
+                <div class="caption z-depth-4">
+                        <h5 class="">Coral Rodriguez</h5>
+                        <h6 class="z-depth-2">Profesional Skin Care</h6>
+                    </div>
+                    <br>
+                    <div class="row">
+                            <a class="btn-floating btn-large z-depth-5 waves-effect waves-light hoverable " style="background-color: rgba(75, 204, 35, 0.6);;"><i class="fa fa-phone fa-5x" aria-hidden="true"></i></a>
+                            <a href="https://www.facebook.com/CoralR.Cosmetics/" class="btn-floating btn-large z-depth-5 waves-effect waves-light hoverable" style="background-color: rgba(75, 204, 35, 0.5);"><i class="fa fa-facebook fa-5x" aria-hidden="true"></i></a>
+                            <a class="btn-floating btn-large z-depth-5 waves-effect waves-light hoverable " style="background-color: rgba(75, 204, 35, 0.4);"><i class="fa fa-map-marker fa-5x" aria-hidden="true"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=9720527034589&text=I'm%20interested%20in%20your%20car%20for%20sale" class="btn-floating btn-large z-depth-5 waves-effect waves-light hoverable " style="background-color: rgba(75, 204, 35, 0.3);"><i class="fa fa-whatsapp fa-5x" aria-hidden="true"></i></i></a>
+                        </div>
+                        <div class="row">
+                            <a href="#modal2" class="btn-floating btn-large z-depth-5 waves-effect waves-light hoverable modal-trigger" style="background-color: rgba(75, 204, 35, 0.3);"><i class="fa fa-video-camera" aria-hidden="true"></i></a>
+                            <a class="btn-floating btn-large z-depth-5  waves-effect waves-light hoverable " style="background-color: rgba(75, 204, 35, 0.4);"><i class="fa fa-calendar fa-5x" aria-hidden="true"></i></a>
+                            <a href="mailto:ravidpo@gmail.com" class="btn-floating btn-large z-depth-5 waves-effect waves-light hoverable " style="background-color: rgba(75, 204, 35, 0.5);" ><i class="fa fa-envelope fa-5x" aria-hidden="true"></i></a>
+                            <a href="#modal1" class="btn-floating btn-large z-depth-5 waves-effect waves-light hoverable modal-trigger"  style="background-color: rgba(75, 204, 35, 0.6);"><i class="fa fa-picture-o fa-5x" aria-hidden="true"></i></a>
+                        </div>
+                       
+                        <div id="modal2" class="modal modal-fixed-footer">
+                            <div class="modal-content">
+                              <h6>Videos</h6>                     
+                                <div class="slider" >
+                                        <ul class="slides" >
+                                            <li class="video-container">
+                                                <iframe width="853" height="480" src="https://www.youtube.com/embed/g2jHspfWJpY" frameborder="0" allowfullscreen></iframe>
+                                            </li>
+                                        </ul>
+                                    </div>                          
+                                    </div>                        
+                            <div class="modal-footer">
+                              <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat "><i class="fa fa-check-circle" aria-hidden="true"></i></a>
+                            </div>
+                          </div>
+
+                          
+                        <div id="modal1" class="modal modal-fixed-footer">                               
+                                <div class="modal-content">
+                                  <h6>Galery</h6>                     
+                                    <div class="slider"  >
+                                            <ul class="slides" >
+                                                <li>
+                                                    <img src="./images/2.jpg" alt="">
+                                                </li>
+                                                <li>
+                                                    <img src="./images/6.jpg" alt="">
+                                                </li>
+                                                <li>
+                                                    <img src="./images/4.jpg" alt="">
+                                                </li>
+                                                <li>
+                                                    <img src="./images/5.jpg" alt="">
+                                                </li>
+                                                <li>
+                                                    <img src="./images/3.jpg" alt="">
+                                                </li>
+                                            </ul>
+                                        </div>                          
+                                        </div>                        
+                                <div class="modal-footer">
+                                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat "><i class="fa fa-check-circle" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+
+                                <a id="manu" class="waves-effect waves-light btn btn-floating btn-large " style="background-color: rgba(75, 204, 35, 0.6);" onclick="$('.tap-target').tapTarget('open')">
+                                    <i class="fa fa-info fa-5x" aria-hidden="true"></i>
+                                </a>
+                    
+                            <div class="tap-target transparent teal accent-3"  data-activates="manu">
+                                <div class="tap-target-content white-text  " >
+                                    <h5>Tap Target</h5>
+                                    <p class="white-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ducimus, aspernatur nemo facilis. </p>
+                                </div>
+                            </div>
+
+                        
+                </div>
+                <div class="container center-align">
+                        <img src="./images/logo.ico" alt="" style="width:130px">
+                </div>   
+                                 
+                    </div>  
+                </div>  
+</div><!-- container -->
+
+  <body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/908123b234.js"></script>
+    <script>
+            $(document).ready(function(){
+    
+                $('.modal').modal();
+                $('.carousel').carousel();
+                $('.carousel.carousel-slider').carousel({fullWidth: true});
+                $('.slider').slider();
+                $(".button-collapse").sideNav();
+                
+                //Materialize.toast('Hello World',3000)
+            });
+    
+            
+        </script>
+        <script>
+                window.fbAsyncInit = function() {
+                  FB.init({
+                    appId      : '1994763020541652',
+                    cookie     : true,
+                    xfbml      : true,
+                    version    : 'v2.11'
+                  });
+                    
+                  
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
+                    
+                };
+              
+                (function(d, s, id){
+                   var js, fjs = d.getElementsByTagName(s)[0];
+                   if (d.getElementById(id)) {return;}
+                   js = d.createElement(s); js.id = id;
+                   js.src = "https://connect.facebook.net/en_US/sdk.js";
+                   fjs.parentNode.insertBefore(js, fjs);
+                 }(document, 'script', 'facebook-jssdk'));
+
+
+                 function statusChangeCallback(response)
+                 {
+                    if(response.status === 'connected'){
+                        setElements(true);
+                        testAPI();
+                        console.log('Logged and autenticated ');
+                    }else {
+                        setElements(false);
+                        console.log('Not autenticated ')
+                    }
+                 }
+
+                 function testAPI(){
+                     FB.api('/me?fields=name,email,birthday,location',function(response){
+                        if(response && !response.error){
+                            //console.log(response);
+                            buildProfile(response);
+                        }
+                     });
+
+                     FB.api('/me/feed',function(response){
+                        if(response && !response.error){
+                            buildFeed(response);
+                        }
+                     })
+                 }
+
+                 function buildFeed(feed){
+                     let output = '<h5>Latest Posts</h5><ul class="collection">';
+                     for(let i in feed.data){
+                        if(feed.data[i].message){
+                            output +=`
+                            
+                                    <li class="collection-item">
+                                            ${feed.data[i].message}
+                                    </li>
+                            
+                            `;
+                        }
+                     }
+
+                     output+='</ul>'
+
+                     document.getElementById('feed').innerHTML = output;
+                 }
+
+                 function buildProfile(user){
+                     let profile = `
+                        <h5>${user.name}</h5>
+                        <div class="collection">
+                            <a href="#" class="collection-item">User ID:${user.id}</a>
+                            <a href="#" class="collection-item">User Location:${user.location.name}</a>
+                            <a href="#" class="collection-item">User Email:${user.email}</a>
+                            <a href="#" class="collection-item">User Birthday:${user.birthday}</a>
+                        </div>
+                     `;
+
+                        document.getElementById('profile').innerHTML = profile;
+
+                 }
+                 
+                function checkLoginState() {
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
+                }
+
+                function setElements(isLoggedIn){
+                    if(isLoggedIn){
+                        document.getElementById('profile').style.display = 'block';
+                        document.getElementById('fb-btn').style.display = 'none';
+                        document.getElementById('logout').style.display = 'block';
+                        document.getElementById('heading').style.display = 'none';
+                        document.getElementById('feed').style.display = 'block';
+                    }else{
+                        document.getElementById('profile').style.display = 'none';
+                        document.getElementById('fb-btn').style.display = 'block';
+                        document.getElementById('logout').style.display = 'none';
+                        document.getElementById('heading').style.display = 'block';
+                        document.getElementById('feed').style.display = 'none';
+                    }
+                }
+
+                function logout(){
+                    FB.logout(function(response){
+                        setElements(false);
+                    });
+                }
+              </script>
+
+
+        <div class="container center-align" style="width: 600px">
+            <a href="" scope="public_profile,email,user_birthday,user_location,user_posts" ></a>
+            <fb:login-button 
+                id="fb-btn"
+                scope="public_profile,email,user_birthday,user_location,user_posts"
+                onlogin="checkLoginState();">
+            </fb:login-button>
+
+            <li><a id="logout" href="#" class="btn" onclick="logout()">Logout</a></li>
+            
+            <h6 id='heading'>Log in to view your profile</h6>
+            <div id="profile"></div>
+            <div id="feed"></div>
+        </div>
+  </body>
+</html>

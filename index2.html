@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <div class="container">
+      <h1>Carousel</h1>
+      <div class="carousel">
+          <a href="#one!" class="carousel-item">
+              <img src="https://static.pexels.com/photos/95632/pexels-photo-95632.jpeg" alt="">
+          </a>
+          <a href="#two!" class="carousel-item">
+                <img src="https://static.pexels.com/photos/39691/family-pier-man-woman-39691.jpeg" alt="">
+         </a>
+         <a href="#three!" class="carousel-item">
+                <img src="https://static.pexels.com/photos/240515/pexels-photo-240515.jpeg" alt="">
+         </a>
+         <a href="#four!" class="carousel-item">
+                <img src="https://static.pexels.com/photos/333529/pexels-photo-333529.jpeg" alt="">
+          </a>
+          <a href="#five!" class="carousel-item">
+                <img src="https://static.pexels.com/photos/108444/pexels-photo-108444.jpeg" alt="">
+          </a>
+      </div>
+
+      <h1>Carousel Full Slider</h1>
+      <div class="carousel carousel-slider">
+            <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
+            <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
+            <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
+            <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
+     </div>
+      <br><br><br>
+
+      <h1>Collapsible</h1>
+      <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">filter_drama</i>First
+            </div>
+            <div class="collapsible-body">
+                <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic in fugiat veniam vel dolorem, debitis molestiae a quibusdam quaerat </span>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header active">
+                <i class="material-icons">filter_drama</i>Second
+            </div>
+            <div class="collapsible-body">
+                <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic in fugiat veniam vel dolorem, debitis molestiae a quibusdam quaerat </span>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header">
+                <i class="material-icons">filter_drama</i>Third
+            </div>
+            <div class="collapsible-body">
+                <span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam hic in fugiat veniam vel dolorem, debitis molestiae a quibusdam quaerat </span>
+            </div>
+        </li>
+      </ul>
+
+      <h1>Toasts</h1>
+
+      <a class="btn" onclick="Materialize.toast('Post Saved',2000,'rounded')">Toast!</a>
+
+      <h1>Tool Tips</h1>
+
+      <a href="" data-position="top" class="btn tooltipped" data-tooltip="I am tooltip">Hover Me</a>
+      <a href="" data-position="bottom" class="btn tooltipped" data-tooltip="I am tooltip" data-delay="2000">Hover Me</a>
+      <a href="" data-position="left" class="btn tooltipped" data-tooltip="I am tooltip">Hover Me</a>
+      <a href="" data-position="right" class="btn tooltipped" data-tooltip="I am tooltip">Hover Me</a>
+
+      <h1>Dropdown</h1>
+
+      <a data-activates="dropdown1" class="dropdown-button btn">Dropdown</a>
+
+      <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider"></li>
+            <li><a href="#!">three</a></li>
+            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+     </ul>
+
+     <h1>MATERIAL BOXED </h1>
+
+     <img src="https://lorempixel.com/800/400/food/1" alt="" class="materialboxed circle" data-caption="Here is an image caption">
+
+     <h1>SLIDER</h1>
+
+     <div class="slider">
+         <ul class="slides">
+             <li>
+                 <img src="https://static.pexels.com/photos/108444/pexels-photo-108444.jpeg" alt="">
+                 <div class="caption center-align">
+                     <h3>This is our tagline</h3>
+                     <h5 class="light grey-text text-lighten-3">Here Is Our Slogan</h5>
+                </div>
+            </li>
+            <li>
+                <img src="https://static.pexels.com/photos/95632/pexels-photo-95632.jpeg" alt="">
+                <div class="caption left-align">
+                    <h3>This is our tagline</h3>
+                    <h5 class="light grey-text text-lighten-3">Here Is Our Slogan</h5>
+                </div>
+            </li>
+            <li>
+                <img src="https://lorempixel.com/800/400/food/4" alt="">
+                <div class="caption right-align">
+                    <h3>This is our tagline</h3>
+                    <h5 class="light grey-text text-lighten-3">Here Is Our Slogan</h5>
+                </div>
+            </li>
+         </ul>
+     </div>
+
+     <h1>MODAL</h1>
+
+     <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+     
+       <!-- Modal Structure -->
+       <div id="modal1" class="modal">
+         <div class="modal-content">
+           <h4>Modal Header</h4>
+           <p>A bunch of text</p>
+         </div>
+         <div class="modal-footer">
+           <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+         </div>
+       </div>
+
+       <h1>SideNav</h1>
+
+       <ul id="slide-out" class="side-nav">
+            <li><div class="user-view">
+              <div class="background">
+                <img src="https://lorempixel.com/800/400/food/1">
+              </div>
+              <a href="#!user"><img class="circle" src="https://lorempixel.com/800/400/food/4"></a>
+              <a href="#!name"><span class="white-text name">John Doe</span></a>
+              <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+            <li><a href="#!">Second Link</a></li>
+            <li><div class="divider"></div></li>
+            <li><a class="subheader">Subheader</a></li>
+            <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+          </ul>
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+        <h1>TABS</h1>
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#test1">Test 1</a></li>
+                    <li class="tab col s3" ><a class="active" href="#test2">Test 2</a></li>
+                    <li class="tab col s3" ><a class="disabled" href="#test3">Test 3</a></li>
+                    <li class="tab col s3"><a href="#test4">Test 4</a></li>
+                </ul>
+            </div>
+            <div id="test1">Test 1</div>
+            <div id="test2">Test 2</div>
+            <div id="test3">Test 3</div>
+            <div id="test4">Test 4</div>
+        </div>
+
+        <div class="fixed-action-btn" style="bottom:45px;right:24px">
+            <a id="manu" class="waves-effect waves-light btn btn-floating btn-large " onclick="$('.tap-target').tapTarget('open')">
+                <i class="material-icons">adjust</i>
+            </a>
+        </div>
+
+        <div class="tap-target" data-activates="manu">
+            <div class="tap-target-content white-text">
+                <h5>Tap Target Content</h5>
+                <p class="white-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto ducimus, aspernatur nemo facilis, sit molestias ullam unde animi adipisci maiores at minus ipsam ratione consequuntur perferendis obcaecati commodi temporibus quis.</p>
+            </div>
+        </div>
+
+  </div>
+  <div style="height: 1000px"></div>
+  <body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $('.modal').modal();
+            $('.carousel').carousel();
+            $('.carousel.carousel-slider').carousel({fullWidth: true});
+            $('.slider').slider();
+            $(".button-collapse").sideNav();
+            
+            //Materialize.toast('Hello World',3000)
+        });
+
+        
+    </script>
+  </body>
+</html>

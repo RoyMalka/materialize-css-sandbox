@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./App.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        #profile,#logout,#feed{display: none;}
+    </style>
+  </head>
+    <!-- <div class="transparent" style="height:50px;"></div> -->
+    <div class="container center-align" >
+        <div class="slider fullscreen">
+            <ul class="slides">
+              <li>
+                <img src="https://scontent.fsdv2-1.fna.fbcdn.net/v/t31.0-8/19221844_119644368632557_6449263957167408154_o.jpg?oh=8a7a74846bd191746104da12eba5b4de&oe=5ACDCF4D"> <!-- random image -->
+                <div  class="caption center-align card-panel transparent hoverable z-depth-5" >
+                  <h3 style="line-height:0.9em; text-align:center;font-size: 6.3vw" class="flow-text white-text">ספרים סקירות ומה שמעבר</h3><br>
+                  <div class="container center-align">
+                    <img src="./images/favicon.ico" alt="" style="width:100px;height: auto">
+                   </div> 
+                  <a href="index5.html" class="waves-effect waves-light btn transparent btn-large " style=" border: 0.5px solid #fff;font-size: 2.5em">כניסה</a>
+                </div>                    
+              </li>
+              <li>
+                <img src="https://images.pexels.com/photos/694740/pexels-photo-694740.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb"> <!-- random image -->
+                <div class="caption center-align card-panel transparent hoverable z-depth-5" >
+                    <p class="flow-text white-text">חיות ונושמות ספרים</p>
+                    <a class="waves-effect waves-light btn transparent btn-large " style=" border: 0.5px solid #fff;font-size: 2.5em">כניסה</a>
+                </div>  
+              </li>
+              <li>
+                <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/05/06/09/istock-508586144.jpg"> <!-- random image -->
+                <div class="caption center-align card-panel transparent hoverable z-depth-5" >
+                    <sapn class="flow-text white-text">חולמות רומנטיקה</span>
+                    <a class="waves-effect waves-light btn transparent btn-large " style=" border: 0.5px solid #fff;font-size: 2.5em">כניסה</a>
+                  </div>  
+              </li>
+              <li>
+                <img src="https://images.pexels.com/photos/261820/pexels-photo-261820.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb"> <!-- random image -->
+                <div class="caption center-align card-panel transparent hoverable z-depth-5" >
+                    <p class="flow-text white-text">סקירות לספרים, ביקורות והמלצות</p>
+                    <a class="waves-effect waves-light btn transparent btn-large " style=" border: 0.5px solid #fff;font-size: 2.5em">כניסה</a>
+                  </div>  
+              </li>
+            </ul>
+          </div>
+    </div><!-- container -->
+
+  <body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/908123b234.js"></script>
+    <script>
+            $(document).ready(function(){
+    
+                $('.modal').modal();
+                $('.carousel').carousel();
+                $('.carousel.carousel-slider').carousel({fullWidth: true});
+                $('.slider').slider();
+                $('.slider').slider('pause');
+                $(".button-collapse").sideNav();
+                
+                //Materialize.toast('Hello World',3000)
+            });
+    
+            
+        </script>
+        <script>
+                window.fbAsyncInit = function() {
+                  FB.init({
+                    appId      : '1994763020541652',
+                    cookie     : true,
+                    xfbml      : true,
+                    version    : 'v2.11'
+                  });
+                    
+                  
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
+                    
+                };
+              
+                (function(d, s, id){
+                   var js, fjs = d.getElementsByTagName(s)[0];
+                   if (d.getElementById(id)) {return;}
+                   js = d.createElement(s); js.id = id;
+                   js.src = "https://connect.facebook.net/en_US/sdk.js";
+                   fjs.parentNode.insertBefore(js, fjs);
+                 }(document, 'script', 'facebook-jssdk'));
+
+
+                 function statusChangeCallback(response)
+                 {
+                    if(response.status === 'connected'){
+                        setElements(true);
+                        testAPI();
+                        console.log('Logged and autenticated ');
+                    }else {
+                        setElements(false);
+                        console.log('Not autenticated ')
+                    }
+                 }
+
+                 function testAPI(){
+                     FB.api('/me?fields=name,email,birthday,location',function(response){
+                        if(response && !response.error){
+                            //console.log(response);
+                            buildProfile(response);
+                        }
+                     });
+
+                     FB.api('/me/feed',function(response){
+                        if(response && !response.error){
+                            buildFeed(response);
+                        }
+                     })
+                 }
+
+                 function buildFeed(feed){
+                     let output = '<h5>Latest Posts</h5><ul class="collection">';
+                     for(let i in feed.data){
+                        if(feed.data[i].message){
+                            output +=`
+                            
+                                    <li class="collection-item">
+                                            ${feed.data[i].message}
+                                    </li>
+                            
+                            `;
+                        }
+                     }
+
+                     output+='</ul>'
+
+                     document.getElementById('feed').innerHTML = output;
+                 }
+
+                 function buildProfile(user){
+                     let profile = `
+                        <h5>${user.name}</h5>
+                        <div class="collection">
+                            <a href="#" class="collection-item">User ID:${user.id}</a>
+                            <a href="#" class="collection-item">User Location:${user.location.name}</a>
+                            <a href="#" class="collection-item">User Email:${user.email}</a>
+                            <a href="#" class="collection-item">User Birthday:${user.birthday}</a>
+                        </div>
+                     `;
+
+                        document.getElementById('profile').innerHTML = profile;
+
+                 }
+                 
+                function checkLoginState() {
+                FB.getLoginStatus(function(response) {
+                    statusChangeCallback(response);
+                });
+                }
+
+                function setElements(isLoggedIn){
+                    if(isLoggedIn){
+                        document.getElementById('profile').style.display = 'block';
+                        document.getElementById('fb-btn').style.display = 'none';
+                        document.getElementById('logout').style.display = 'block';
+                        document.getElementById('heading').style.display = 'none';
+                        document.getElementById('feed').style.display = 'block';
+                    }else{
+                        document.getElementById('profile').style.display = 'none';
+                        document.getElementById('fb-btn').style.display = 'block';
+                        document.getElementById('logout').style.display = 'none';
+                        document.getElementById('heading').style.display = 'block';
+                        document.getElementById('feed').style.display = 'none';
+                    }
+                }
+
+                function logout(){
+                    FB.logout(function(response){
+                        setElements(false);
+                    });
+                }
+              </script>
+
+
+        <!-- <div class="container center-align" style="width: 600px">
+            <a href="" scope="public_profile,email,user_birthday,user_location,user_posts" ></a>
+            <fb:login-button class="btn-floating btn-large"
+                id="fb-btn"
+                scope="public_profile,email,user_birthday,user_location,user_posts"
+                onlogin="checkLoginState();">
+            </fb:login-button>
+
+            <li><a id="logout" href="#" class="btn" onclick="logout()">Logout</a></li>
+            
+            <h6 id='heading'>Log in to view your profile</h6>
+            <div id="profile"></div>
+            <div id="feed"></div>
+        </div> -->
+  </body>
+</html>
